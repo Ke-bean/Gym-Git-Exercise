@@ -244,3 +244,99 @@ remote:
 To https://github.com/Ke-bean/Gym-Git-Exercise.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 ```
+
+### Exercise 2
+
+```bash
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git add .
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git commit -m "modified service.html"
+ 1 file changed, 1 insertion(+)
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git push
+fatal: The current branch ft/service-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/service-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git push --set-upstream origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Writing objects: 100% (3/3), 397 bytes | 44.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:
+To https://github.com/Ke-bean/Gym-Git-Exercise.git
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout main
+Switched to branch 'main'
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git add .
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git commit -m "modified service page"
+[main 436747d] modified service page
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git push
+Enumerating objects: 5, done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 396 bytes | 198.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Ke-bean/Gym-Git-Exercise.git
+   4148efb..436747d  main -> main
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git diff main
+diff --git a/services.html b/services.html
+index 66aedfd..630d7ac 100644
+--- a/services.html
++++ b/services.html
+ <body>
+     <p>These are our services</p>
+-    <p>This section will include  all new  services that our company offer to our custom and premium clients worldwide</p>
++    <p>This section will include all the services that our company offer to our custom and premium clients worldwide</p>
+ </body>
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git merge main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions>
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git status
+On branch ft/service-redesign
+Merge branch 'main' into ft/service-redesign
+You have unmerged paths.
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   services.html
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git add .
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git commit
+[ft/service-redesign eb515ac] Merge branch 'main' into ft/service-redesign
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git status
+On branch ft/service-redesign
+Your branch is ahead of 'origin/ft/service-redesign' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 329 bytes | 164.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Ke-bean/Gym-Git-Exercise.git
+   4dfd525..eb515ac  ft/service-redesign -> ft/service-redesign
+```
