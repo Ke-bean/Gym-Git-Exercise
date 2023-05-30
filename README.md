@@ -208,3 +208,39 @@ Dropped refs/stash@{0} (63f3daee6a7b6a4b4bbd8e628df0b642a2f0725a)
 PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git reset --hard
 HEAD is now at e341fee added home and about page
 ```
+
+## Bundle 2
+
+### Exercise 1
+
+```bash
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git add .
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git commit -m "Added services page"
+[ft/bundle-2 bb56cc9] Added services page
+ create mode 100644 services.html
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git push
+fatal: The current branch ft/bundle-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundle-2
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git push origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 477 bytes | 79.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/Ke-bean/Gym-Git-Exercise/pull/new/ft/bundle-2
+remote:
+To https://github.com/Ke-bean/Gym-Git-Exercise.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+```
