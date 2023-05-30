@@ -138,3 +138,73 @@ PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout main
 Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 ```
+
+### Exercise 2
+
+```bash
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        home.html
+
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git stash list
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git status
+
+  (use "git restore --staged <file>..." to unstage)
+        new file:   home.html
+
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git stash
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git stash list
+stash@{0}: WIP on main: 8efd933 updated readme
+Saved working directory and index state WIP on main: 8efd933 updated readme
+git: 'statsh' is not a git command. See 'git --help'.
+
+The most similar command is
+        stash
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git stash list
+stash@{0}: WIP on main: 8efd933 updated readme
+stash@{1}: WIP on main: 8efd933 updated readme
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git add .
+Saved working directory and index state WIP on main: 8efd933 updated readme
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git stash pop 1
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+        new file:   about.html
+        new file:   home.html
+
+Dropped refs/stash@{1} (d4257932eeda65337d3eea82bd495ef5aa2ef518)
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git add .
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git commit -m "added home and about page"
+[main e341fee] added home and about page
+ 2 files changed, 24 insertions(+)
+ create mode 100644 about.html
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git push
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 549 bytes | 183.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Ke-bean/Gym-Git-Exercise.git
+   8efd933..e341fee  main -> main
+stash@{0}: WIP on main: 8efd933 updated readme
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git stash pop
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Dropped refs/stash@{0} (63f3daee6a7b6a4b4bbd8e628df0b642a2f0725a)
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git reset --hard
+HEAD is now at e341fee added home and about page
+```
