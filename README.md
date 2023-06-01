@@ -340,3 +340,185 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/Ke-bean/Gym-Git-Exercise.git
    4dfd525..eb515ac  ft/service-redesign -> ft/service-redesign
 ```
+
+## Bundle 3
+
+### Exercise 1
+
+```bash
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git add .
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git commit -m "added new team page"
+[ft/team-page 6e21f28] added new team page
+ create mode 100644 team.html
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git push
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/team-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git push origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 478 bytes | 12.00 KiB/s, done.
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:
+To https://github.com/Ke-bean/Gym-Git-Exercise.git
+ * [new branch]      ft/team-page -> ft/team-page
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout ft/team-page
+Switched to branch 'ft/team-page'
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git log
+Author: kebean <chenqiua@gmail.com>
+
+    added new team page
+
+commit 6de757abb8e388d236f442325cc25bc4cfdbf641 (origin/main, main, ft/contact-page)
+Author: kebean <chenqiua@gmail.com>
+Date:   Tue May 30 15:49:07 2023 +0300
+
+    #bundle 2 #Exercise 2
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git log
+Author: kebean <chenqiua@gmail.com>
+Date:   Tue May 30 15:49:07 2023 +0300
+
+    #bundle 2 #Exercise 2
+commit 436747ded1c80b11b9f3ddd27ce47df685320191
+Author: kebean <chenqiua@gmail.com>
+Date:   Tue May 30 15:22:29 2023 +0300
+
+    modified service page
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git cherry-pick 6e21f284badf728c9042e90a0
+[ft/contact-page 13b173a] added new team page
+ Date: Thu Jun 1 10:06:27 2023 +0300
+ 1 file changed, 12 insertions(+)
+ create mode 100644 team.html
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git log
+Author: kebean <chenqiua@gmail.com>
+Date:   Thu Jun 1 10:06:27 2023 +0300
+    added new team page
+
+commit 6de757abb8e388d236f442325cc25bc4cfdbf641 (origin/main, main)
+Author: kebean <chenqiua@gmail.com>
+Date:   Tue May 30 15:49:07 2023 +0300
+
+On branch ft/contact-page
+nothing to commit, working tree clean
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git status
+On branch ft/contact-page
+Untracked files:
+        contact.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git status
+On branch ft/contact-page
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   contact.html
+
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git commit -m "Contact page added"
+[ft/contact-page f260f4e] Contact page added
+ 1 file changed, 12 insertions(+)
+ create mode 100644 contact.html
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git push --set-upstream origin ft/contact
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Writing objects: 100% (6/6), 753 bytes | 376.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote:      https://github.com/Ke-bean/Gym-Git-Exercise/pull/new/ft/contact-page
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git status
+Your branch is up to date with 'origin/ft/contact-page'.
+
+nothing to commit, working tree clean
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git add .
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git commit -m "FAQ page added"
+[ft/faq-page 685a404] FAQ page added
+ 1 file changed, 12 insertions(+)
+ create mode 100644 faq.html
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git push --set-upstream origin ft/faq-pag
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Writing objects: 100% (3/3), 472 bytes | 157.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/Ke-bean/Gym-Git-Exercise/pull/new/ft/faq-page
+remote:
+To https://github.com/Ke-bean/Gym-Git-Exercise.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git log
+Author: kebean <chenqiua@gmail.com>
+
+    FAQ page added
+
+commit f260f4e1a151a7a8e872b40bcee7abda6b82a971 (origin/ft/contact-page, ft/contact-page)
+Author: kebean <chenqiua@gmail.com>
+Date:   Thu Jun 1 10:40:06 2023 +0300
+
+    Contact page added
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout ft/team-page
+Switched to branch 'ft/team-page'
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git log
+ge)
+Author: kebean <chenqiua@gmail.com>
+Date:   Thu Jun 1 10:06:27 2023 +0300
+
+    added new team page
+
+commit 6de757abb8e388d236f442325cc25bc4cfdbf641 (origin/main, main)
+Author: kebean <chenqiua@gmail.com>
+Date:   Tue May 30 15:49:07 2023 +0300
+
+    #bundle 2 #Exercise 2
+    PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git revert 6e21f284badf728c9042e90a0df5806f355f89c9
+[ft/team-page 393dcc4] Revert "added new team page"
+ delete mode 100644 team.html
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout
+ft/faq-page
+Switched to branch 'ft/faq-page'
+Your branch is up to date with 'origin/ft/faq-page'.
+[ft/faq-page 1f9ae25] Revert "added new team page"
+ 1 file changed, 12 deletions(-)
+ delete mode 100644 team.html
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git status
+Your branch is ahead of 'origin/ft/faq-page' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git push origin ft/faq-pafe
+error: src refspec ft/faq-pafe does not match any
+error: failed to push some refs to 'https://github.com/Ke-bean/Gym-Git-Exercise.git'
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git push origin ft/faq-page       in ft/faq-page
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 271 bytes | 54.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Ke-bean/Gym-Git-Exercise.git
+   685a404..1f9ae25  ft/faq-page -> ft/faq-page
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions>
+```
