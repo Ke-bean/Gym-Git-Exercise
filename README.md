@@ -639,3 +639,110 @@ PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout main
 Already on 'main'
 Your branch is up to date with 'origin/main'.
 ```
+
+### Exercise 2
+
+```bash
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git status
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        footer.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git add .
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git commit -m "footer page added"
+ create mode 100644 footer.html
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git status
+On branch ft/footer
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+        modified:   footer.html
+
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git add footer.html
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git status
+On branch ft/footer
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   footer.html
+
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git commit -m "new content added"
+[ft/footer 6d4364d] new content added
+ 1 file changed, 12 insertions(+)
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git push origin ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 691 bytes | 1024 bytes/s, done.
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:
+To https://github.com/Ke-bean/Gym-Git-Exercise.git
+ * [new branch]      ft/footer -> ft/footer
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout ft/footer
+Switched to branch 'ft/footer'
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git log
+Author: kebean <chenqiua@gmail.com>
+
+    new content added
+
+commit 261077fba356a8bc8ecd6a05486ef4c60d77ae9f
+Author: kebean <chenqiua@gmail.com>
+Date:   Thu Jun 1 12:20:33 2023 +0300
+    footer page added
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout ft/squashing
+Switched to branch 'ft/squashing'
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git merge --squash ft/footer
+Updating b899f8b..6d4364d
+ footer.html | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 footer.html
+On branch ft/squashing
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   footer.html
+
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git add footer.html
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git commit -m "footer changes squashing"
+[ft/squashing 9ee740b] footer changes squashing
+ 1 file changed, 12 insertions(+)
+ create mode 100644 footer.html
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git log
+Author: kebean <chenqiua@gmail.com>
+Date:   Thu Jun 1 12:34:45 2023 +0300
+    footer changes squashing
+
+commit b899f8bca698b878e08a723d8942242509938002 (origin/main, main)
+Author: kebean <chenqiua@gmail.com>
+Date:   Thu Jun 1 12:17:02 2023 +0300
+    readmefile modified
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git status
+On branch ft/squashing
+nothing to commit, working tree clean
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git push oring ft/squashing
+fatal: 'oring' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git push origin  ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 460 bytes | 230.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/Ke-bean/Gym-Git-Exercise/pull/new/ft/squashing
+remote:
+To https://github.com/Ke-bean/Gym-Git-Exercise.git
+ * [new branch]      ft/squashing -> ft/squashing
+```
