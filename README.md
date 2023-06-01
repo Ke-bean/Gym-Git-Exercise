@@ -886,3 +886,35 @@ To https://github.com/Ke-bean/git-cafe-exercise.git
  * [new branch]      bug-fix -> bug-fix
 branch 'bug-fix' set up to track 'origin/bug-fix'.
 ```
+
+### Exercise 3
+
+```bash
+
+Switched to a new branch 'contact-hotfix'
+PS C:\Users\Kebean\Documents\Projects\git-cafe-exercise> git status
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index-4.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Kebean\Documents\Projects\git-cafe-exercise> git add .
+PS C:\Users\Kebean\Documents\Projects\git-cafe-exercise> git commit -m "changed contact phone number"
+[contact-hotfix 11a7c14] changed contact phone number
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\Kebean\Documents\Projects\git-cafe-exercise> git push origin contact-hotfix
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 301 bytes | 150.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'contact-hotfix' on GitHub by visiting:
+remote:      https://github.com/Ke-bean/git-cafe-exercise/pull/new/contact-hotfix
+remote:
+To https://github.com/Ke-bean/git-cafe-exercise.git
+ * [new branch]      contact-hotfix -> contact-hotfix
+```
