@@ -746,3 +746,43 @@ remote:
 To https://github.com/Ke-bean/Gym-Git-Exercise.git
  * [new branch]      ft/squashing -> ft/squashing
 ```
+
+## Bundle 5
+
+### Exercise 1
+
+```bash
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    home.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git add .
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git status
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    home.html -> index.html
+
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git commit -m "renamed home to index"
+[main bd252cd] renamed home to index
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename home.html => index.html (100%)
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 231 bytes | 115.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Ke-bean/Gym-Git-Exercise.git
+   4138c25..bd252cd  main -> main
+```
