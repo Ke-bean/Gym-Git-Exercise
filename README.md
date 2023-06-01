@@ -786,3 +786,35 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/Ke-bean/Gym-Git-Exercise.git
    4138c25..bd252cd  main -> main
 ```
+
+### Exercise 2
+
+```bash
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Kebean\Documents\Projects\git-cafe-exercise> git add index.html
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+PS C:\Users\Kebean\Documents\Projects\git-cafe-exercise> git commit -m "modified index.html"
+[main fb40918] modified index.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\Kebean\Documents\Projects\git-cafe-exercise> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 315 bytes | 39.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Ke-bean/git-cafe-exercise.git
+   d1d3f9c..fb40918  main -> main
+PS C:\Users\Kebean\Documents\Projects\git-cafe-exercise>
+```
