@@ -818,3 +818,38 @@ To https://github.com/Ke-bean/git-cafe-exercise.git
    d1d3f9c..fb40918  main -> main
 PS C:\Users\Kebean\Documents\Projects\git-cafe-exercise>
 ```
+
+## Bundle 6
+
+### Exercise 1
+
+```bash
+PS C:\Users\Kebean\Documents\Projects\git-cafe-exercise> git checkout -b ft/exercise-1
+On branch ft/exercise-1
+nothing to commit, working tree clean
+PS C:\Users\Kebean\Documents\Projects\git-cafe-exercise> git status
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        menu.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Kebean\Documents\Projects\git-cafe-exercise> git add menu.html
+PS C:\Users\Kebean\Documents\Projects\git-cafe-exercise> git commit -m "added menu page"
+[ft/exercise-1 381be48] added menu page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 menu.html
+PS C:\Users\Kebean\Documents\Projects\git-cafe-exercise> git push origin ft/exercise-1
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 488 bytes | 69.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/exercise-1' on GitHub by visiting:
+remote:      https://github.com/Ke-bean/git-cafe-exercise/pull/new/ft/exercise-1
+remote:
+To https://github.com/Ke-bean/git-cafe-exercise.git
+ * [new branch]      ft/exercise-1 -> ft/exercise-1
+```
