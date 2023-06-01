@@ -522,3 +522,51 @@ To https://github.com/Ke-bean/Gym-Git-Exercise.git
    685a404..1f9ae25  ft/faq-page -> ft/faq-page
 PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions>
 ```
+
+### Exercise 2
+
+```bash
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git log
+Author: kebean <chenqiua@gmail.com>
+
+    Revert "added new team page"
+
+    This reverts commit 6e21f284badf728c9042e90a0df5806f355f89c9.
+
+commit 685a4045456ebcc17e0c56a0652bdd2e204d25a9
+Author: kebean <chenqiua@gmail.com>
+Date:   Thu Jun 1 10:48:11 2023 +0300
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git log
+Author: kebean <chenqiua@gmail.com>
+Date:   Thu Jun 1 11:24:33 2023 +0300
+
+commit e852828f6908b56b975eab192d1a7a0c16423cb4
+Author: kebean <chenqiua@gmail.com>
+Date:   Thu Jun 1 11:19:23 2023 +0300
+
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git status
+On branch ft/home-page-redesign
+nothing to commit, working tree clean
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git add .
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git commit -m "new content added"
+[ft/home-page-redesign ce5c944] new content added
+ 1 file changed, 1 insertion(+)
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git push origin ft/home-page-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 329 bytes | 164.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/Ke-bean/Gym-Git-Exercise/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/Ke-bean/Gym-Git-Exercise.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+```
