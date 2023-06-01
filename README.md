@@ -570,3 +570,72 @@ remote:
 To https://github.com/Ke-bean/Gym-Git-Exercise.git
  * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
 ```
+
+## Bundle 4
+
+### Exercise 1
+
+```bash
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git remote add git-copy https://github.com/Ke-bean/Gym-git-clone.git
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git remote
+git-copy
+origin
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git add .
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git commit -m "style file added"
+ 1 file changed, 1 insertion(+)
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git push
+To https://github.com/Ke-bean/Gym-Git-Exercise.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/Ke-bean/Gym-Git-Exercise.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git pull
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (2/2), 703 bytes | 4.00 KiB/s, done.
+From https://github.com/Ke-bean/Gym-Git-Exercise
+   b087116..8c363af  main       -> origin/main
+Auto-merging home.html
+Merge made by the 'ort' strategy.
+ home.html | 1 +
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git push
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 635 bytes | 105.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To https://github.com/Ke-bean/Gym-Git-Exercise.git
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git push git-copy
+Counting objects: 100% (64/64), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (62/62), done.
+Writing objects: 100% (64/64), 12.20 KiB | 567.00 KiB/s, done.
+Total 64 (delta 32), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (32/32), done.
+To https://github.com/Ke-bean/Gym-git-clone.git
+ * [new branch]      main -> main
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git push origin
+Everything up-to-date
+PS C:\Users\Kebean\Documents\Projects\Git Exercise Solutions> git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+```
